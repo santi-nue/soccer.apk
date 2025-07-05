@@ -19,5 +19,4 @@ jobs:
           git checkout jsgame0
           cd ..
           # mkdir -p myrepo/target
-          mv temp-repo/some/subdir myrepo/target/   app/src/main/assets/
-          
+          mv temp-repo/soccer-master/  app/src/main/assets/
