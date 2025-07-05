@@ -1,0 +1,23 @@
+name: Build Android APK
+
+on:
+  workflow_dispatch:
+
+jobs:
+  fetch-subdir:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout your own repo
+        uses: actions/checkout@v4
+
+      - name: Fetch only a subdirectory from another repo
+        run: |
+          git clone --single-branch --branch jsgame0  --filter=blob:none --no-checkout https://github.com/thisarray/Code-the-Classics.git temp-repo
+          cd temp-repo
+          git sparse-checkout init --cone
+          git sparse-checkout set soccer-master
+          git checkout main
+          cd ..
+          # mkdir -p myrepo/target
+          mv temp-repo/some/subdir myrepo/target/   app/src/main/assets/
+          
