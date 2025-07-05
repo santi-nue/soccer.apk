@@ -20,3 +20,4 @@ jobs:
           cd ..
           # mkdir -p myrepo/target
           mv temp-repo/soccer-master/  app/src/main/assets/
+          ls -a app/src/main/assets/
