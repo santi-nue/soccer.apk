@@ -16,7 +16,7 @@ jobs:
           cd temp-repo
           git sparse-checkout init --cone
           git sparse-checkout set soccer-master
-          git checkout master
+          git checkout jsgame0
           cd ..
           # mkdir -p myrepo/target
           mv temp-repo/some/subdir myrepo/target/   app/src/main/assets/
